@@ -124,15 +124,16 @@ export const coffeeDispatch = (state: CoffeeState, action: any) => {
 
     case ActionTypes.CONFIRM_ORDER: {
       return produce(state, (draft) => {
+        const { orderData } = draft
         console.log(action.payload)
-        /*  orderData.cep = action.payload.cep
+        orderData.cep = action.payload.cep
         orderData.bairro = action.payload.bairro
         orderData.cidade = action.payload.cidade
         orderData.complemento = action.payload.complemento
         orderData.numero = action.payload.numero
         orderData.rua = action.payload.rua
         orderData.uf = action.payload.uf
-        orderData.payment = action.payload.payment */
+        orderData.payment = action.payload.payment
       })
     }
 
