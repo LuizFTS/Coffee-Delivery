@@ -35,10 +35,11 @@
 
   <h2>Getting Started</h2>
   <ol>
-    <li>Clone the repository: <code>git clone https://github.com/your-username/coffee-delivery-app.git</code></li>
-    <li>Navigate to the project directory: <code>cd coffee-delivery-app</code></li>
+    <li>Clone the repository: <code>git clone https://github.com/LuizFTS/Coffee-Delivery.git</code></li>
+    <li>Navigate to the project directory: <code>cd coffee-delivery</code></li>
     <li>Install the dependencies: <code>npm install</code></li>
     <li>Start the development server: <code>npm run dev</code></li>
     <li>Open your browser and visit <code>http://localhost:5173</code> to see the app in action.</li>
   </ol>
 </body>
+
