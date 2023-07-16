@@ -1,5 +1,4 @@
 import { styled } from 'styled-components'
-import { defaultTheme } from '../../styles/theme/default'
 
 export const ScreenContainer = styled.div`
   display: flex;

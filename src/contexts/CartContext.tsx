@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useEffect, useReducer } from 'react'
+import { ReactNode, createContext, useReducer } from 'react'
 import { Coffee, Order, coffeeDispatch } from '../reducers/coffees/reducer'
 
 import {
