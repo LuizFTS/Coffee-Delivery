@@ -1,21 +1,25 @@
 import { styled } from 'styled-components'
 
 export const ProductsListContainer = styled.div`
-  margin-bottom: 9.8125rem;
-  padding: 0 10rem;
+  width: 100%;
+  padding: 0;
+
   h2 {
     font-family: ${(props) => props.theme.baloo.family};
     font-size: ${(props) => props.theme.baloo.size.lg};
     color: ${(props) => props.theme['base-subtitle']};
-    margin: 3.375rem 0;
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 73rem;
+    padding: 0 1.5rem;
   }
 `
 export const ProductCardList = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  max-width: 73rem;
+  padding: 0 1.5rem;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-
-  @media (min-width: 1440px) {
-    justify-content: center;
-  }
 `

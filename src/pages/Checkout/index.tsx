@@ -23,7 +23,7 @@ const addressFormValidationSchema = z.object({
   cep: z
     .string()
     .min(8, 'CEP inválido')
-    .max(8, 'CEP inválido')
+    .max(9, 'CEP inválido')
     .transform((value) => value.replace('-', '')),
   rua: z
     .string()
@@ -53,12 +53,12 @@ type NewAddressFormData = z.infer<typeof addressFormValidationSchema>
 
 export const Checkout = () => {
   const navigate = useNavigate()
-  const { coffee, confirmOrder } = useContext(CartContext)
+  const { coffee, confirmOrder, resetState } = useContext(CartContext)
   const [paymentMethod, setPaymentMethod] = useState<number>(3)
 
   const newAddressForm = useForm<NewAddressFormData>({
     resolver: zodResolver(addressFormValidationSchema),
-    /* defaultValues: {
+    defaultValues: {
       cep: '',
       rua: '',
       numero: '',
@@ -66,7 +66,7 @@ export const Checkout = () => {
       bairro: '',
       cidade: '',
       uf: '',
-    }, */
+    },
   })
 
   const {
@@ -95,8 +95,10 @@ export const Checkout = () => {
       payment: paymentMethod,
     }
     confirmOrder(newOrder)
+    console.log(newOrder)
     const orderJSON = JSON.stringify(newOrder)
     localStorage.setItem('@coffee-delivery:delivery-location-1.0.0', orderJSON)
+    resetState()
     navigate('/ordered')
   }
 

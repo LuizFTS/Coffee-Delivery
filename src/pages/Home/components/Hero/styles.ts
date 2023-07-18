@@ -1,14 +1,21 @@
 import { styled } from 'styled-components'
 export const HeroSectionContainer = styled.section`
-  padding: 6.5rem 10rem;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
+  width: 100%;
 
   background-image: url('HeroBG.svg');
   background-repeat: no-repeat;
   background-size: cover;
+`
+
+export const HeroSectionContent = styled.div`
+  padding: 94px 1.5rem;
+  width: 100%;
+  max-width: 73rem;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
 
   @media (max-width: 1024px) {
     flex-direction: column-reverse;
@@ -75,4 +82,14 @@ export const ItemIcon = styled.div<ItemIconProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+`
+
+export const HeroImageContainer = styled.div`
+  img {
+    width: 476px;
+
+    @media (max-width: 640px) {
+      width: 337px;
+    }
+  }
 `

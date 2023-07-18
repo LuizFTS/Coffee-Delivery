@@ -8,6 +8,7 @@ export enum ActionTypes {
   DECREASE_CART_COFFEE = 'DECREASE_CART_COFFEE',
   REMOVE_FROM_CART = 'REMOVE_FROM_CART',
   CONFIRM_ORDER = 'CONFIRM_ORDER',
+  RESET_STATE = 'RESET_STATE',
 }
 
 export function increaseQuantityAction(item: Coffee) {
@@ -49,6 +50,10 @@ export function removeItemFromTheCartAction(item: Coffee) {
     type: ActionTypes.REMOVE_FROM_CART,
     payload: item,
   }
+}
+
+export function resetStateAction() {
+  return { type: ActionTypes.RESET_STATE }
 }
 
 export function confirmOrderAction(order: Order) {

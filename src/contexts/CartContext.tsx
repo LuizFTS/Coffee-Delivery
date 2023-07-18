@@ -20,9 +20,12 @@ import {
 import {
   addToCartAction,
   confirmOrderAction,
+  decreaseCartQuantityAction,
   decreaseQuantityAction,
+  increaseCartQuantityAction,
   increaseQuantityAction,
   removeItemFromTheCartAction,
+  resetStateAction,
 } from '../reducers/coffees/actions'
 
 interface CartContextProps {
@@ -39,6 +42,7 @@ interface CartContextType {
   increaseCartQuantity: (item: Coffee) => void
   decreaseCartQuantity: (item: Coffee) => void
   removeItemFromTheCart: (item: Coffee) => void
+  resetState: () => void
 }
 
 export const CartContext = createContext({} as CartContextType)
@@ -230,11 +234,11 @@ export const CartContextProvider = ({ children }: CartContextProps) => {
   }
 
   function increaseCartQuantity(item: Coffee) {
-    dispatch(increaseCartQuantity(item))
+    dispatch(increaseCartQuantityAction(item))
   }
 
   function decreaseCartQuantity(item: Coffee) {
-    dispatch(decreaseCartQuantity(item))
+    dispatch(decreaseCartQuantityAction(item))
   }
 
   function removeItemFromTheCart(item: Coffee) {
@@ -243,6 +247,10 @@ export const CartContextProvider = ({ children }: CartContextProps) => {
 
   function confirmOrder(order: Order) {
     dispatch(confirmOrderAction(order))
+  }
+
+  function resetState() {
+    dispatch(resetStateAction())
   }
 
   return (
@@ -257,6 +265,7 @@ export const CartContextProvider = ({ children }: CartContextProps) => {
         increaseCartQuantity,
         decreaseCartQuantity,
         removeItemFromTheCart,
+        resetState,
       }}
     >
       {children}

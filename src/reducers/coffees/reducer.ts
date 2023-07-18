@@ -137,6 +137,16 @@ export const coffeeDispatch = (state: CoffeeState, action: any) => {
       })
     }
 
+    case ActionTypes.RESET_STATE: {
+      return produce(state, (draft) => {
+        draft.coffee.map((item) => {
+          return (item.cart = false)
+        })
+        draft.coffee.map((item) => {
+          return (item.cartQuantity = 0)
+        })
+      })
+    }
     default:
       return state
   }
