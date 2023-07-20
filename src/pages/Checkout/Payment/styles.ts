@@ -26,6 +26,9 @@ export const PaymentOptions = styled.div`
     display: none;
     visibility: hidden;
   }
+  @media (max-width: 640px) {
+    flex-direction: column;
+  }
 `
 
 export const PaymentOption = styled.div`

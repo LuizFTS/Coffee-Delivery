@@ -47,3 +47,17 @@ export const ButtonM = css`
   font-weight: ${({ theme }) => theme.font.buttonM.weight};
   line-height: ${({ theme }) => theme.font.buttonM.lineHeight};
 `
+
+export const FlexCenter = css`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+/*
+ small screen - 640px
+ medium screen - 768px
+ lg screen - 1024px
+ xl screen - 1280px
+ 2xl screen - 1536
+*/

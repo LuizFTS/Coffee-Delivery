@@ -13,6 +13,10 @@ export const ProductsListContainer = styled.div`
     max-width: 73rem;
     padding: 0 1.5rem;
   }
+
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
 `
 export const ProductCardList = styled.div`
   width: 100%;
@@ -22,4 +26,8 @@ export const ProductCardList = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
+
+  @media (max-width: 1024px) {
+    justify-content: center;
+  }
 `

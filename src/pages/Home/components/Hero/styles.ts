@@ -20,6 +20,7 @@ export const HeroSectionContent = styled.div`
   @media (max-width: 1024px) {
     flex-direction: column-reverse;
     justify-content: center;
+    padding: 2rem 1.5rem;
   }
 `
 
@@ -33,12 +34,20 @@ export const HeroSectionTitleContainer = styled.div`
     font-family: ${(props) => props.theme.baloo.family};
     font-size: ${(props) => props.theme.baloo.size.xl};
     font-weight: 900;
+
+    @media (max-width: 640px) {
+      font-size: ${({ theme }) => theme.baloo.size.md};
+    }
   }
 
   p {
     font-family: ${(props) => props.theme.roboto.family};
     font-size: ${(props) => props.theme.roboto.size.lg};
     font-weight: 400;
+
+    @media (max-width: 640px) {
+      font-size: ${({ theme }) => theme.roboto.size.md};
+    }
   }
 `
 
@@ -46,6 +55,11 @@ export const HeroSectionTitleAndItemsContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 4.125rem;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    align-items: center;
+  }
 `
 
 export const HeroSectionItemsList = styled.ul`
@@ -58,6 +72,10 @@ export const HeroSectionItemsList = styled.ul`
     align-items: center;
     gap: 0.75rem;
     margin-bottom: 1.25rem;
+  }
+
+  @media (max-width: 640px) {
+    columns: 1;
   }
 `
 
@@ -85,11 +103,17 @@ export const ItemIcon = styled.div<ItemIconProps>`
 `
 
 export const HeroImageContainer = styled.div`
+  display: flex;
   img {
     width: 476px;
 
     @media (max-width: 640px) {
       width: 337px;
     }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    justify-content: center;
   }
 `

@@ -4,6 +4,11 @@ export const CheckoutContainer = styled.div`
   padding: 2.5rem 10rem;
   display: flex;
   gap: 2rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    padding: 2.5rem 2rem;
+  }
 `
 
 export const OrderFormContainer = styled.div`
@@ -17,6 +22,10 @@ export const OrderFormContainer = styled.div`
     color: ${({ theme }) => theme['base-subtitle']};
     line-height: 1.3;
     margin-bottom: 0.25rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
   }
 `
 export const AddressFormContainer = styled.form`
@@ -61,6 +70,11 @@ export const AddressForm = styled.div`
   display: grid;
   grid-gap: 1rem;
   grid-template-columns: 12.5rem auto 4rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 6rem 5rem 3rem;
+    grid-gap: 0.5rem;
+  }
 `
 
 export const ErrorsContainer = styled.div`
