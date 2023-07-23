@@ -1,13 +1,22 @@
 import { styled } from 'styled-components'
 
 export const CheckoutContainer = styled.div`
-  padding: 2.5rem 10rem;
+  width: 100%;
   display: flex;
   gap: 2rem;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  max-width: 20rem;
 
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    padding: 2.5rem 2rem;
+  @media (min-width: 640px) {
+    max-width: 40rem;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 70rem;
+    flex-direction: row;
   }
 `
 
@@ -15,7 +24,8 @@ export const OrderFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  width: 50%;
+  width: 100%;
+  max-width: 40rem;
   h2 {
     font-family: ${({ theme }) => theme.baloo.family};
     font-size: ${({ theme }) => theme.baloo.size.xs};
@@ -24,8 +34,26 @@ export const OrderFormContainer = styled.div`
     margin-bottom: 0.25rem;
   }
 
-  @media (max-width: 1024px) {
+  @media (min-width: 1024px) {
     width: 100%;
+  }
+`
+export const OrderCoffeesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 40rem;
+  h2 {
+    font-family: ${({ theme }) => theme.baloo.family};
+    font-size: ${({ theme }) => theme.baloo.size.xs};
+    color: ${({ theme }) => theme['base-subtitle']};
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+
+  @media (min-width: 1280px) {
+    width: 28rem;
   }
 `
 export const AddressFormContainer = styled.form`
@@ -69,11 +97,10 @@ export const TitleContainer = styled.div<TitleContainerIconColor>`
 export const AddressForm = styled.div`
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: 12.5rem auto 4rem;
+  grid-template-columns: 1fr;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: 6rem 5rem 3rem;
-    grid-gap: 0.5rem;
+  @media (min-width: 640px) {
+    grid-template-columns: 12.5rem auto 4rem;
   }
 `
 

@@ -1,10 +1,5 @@
 import { styled } from 'styled-components'
 
-export const AddressForm = styled.form`
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: 12.5rem auto 4rem;
-`
 export const TextInput = styled.input`
   border-radius: 6px;
   background: ${({ theme }) => theme['base-input']};
@@ -27,7 +22,7 @@ export const TextInput = styled.input`
     grid-column: 1 / span 1;
   }
   &:nth-child(2) {
-    grid-column: 1 / span 3;
+    grid-column: 1 / span 1;
   }
 
   &:nth-child(3) {
@@ -35,6 +30,41 @@ export const TextInput = styled.input`
   }
 
   &:nth-child(4) {
-    grid-column: 2 / span 2;
+    grid-column: 1 / span 1;
+  }
+  &:nth-child(5) {
+    grid-column: 1 / span 1;
+  }
+  &:nth-child(6) {
+    grid-column: 1 / span 1;
+  }
+  &:nth-child(7) {
+    grid-column: 1 / span 1;
+  }
+
+  @media (min-width: 640px) {
+    &:nth-child(1) {
+      grid-column: 1 / span 1;
+    }
+    &:nth-child(2) {
+      grid-column: 1 / span 3;
+    }
+
+    &:nth-child(3) {
+      grid-column: 1 / span 1;
+    }
+
+    &:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+    &:nth-child(5) {
+      grid-column: 1 / span 1;
+    }
+    &:nth-child(6) {
+      grid-column: 2 / span 1;
+    }
+    &:nth-child(7) {
+      grid-column: 3 / span 1;
+    }
   }
 `

@@ -8,19 +8,30 @@ export const HeroSectionContainer = styled.section`
 `
 
 export const HeroSectionContent = styled.div`
-  padding: 94px 1.5rem;
   width: 100%;
-  max-width: 73rem;
+  max-width: 22rem;
   margin: 0 auto;
 
   display: flex;
-  justify-content: space-between;
   align-items: start;
+  justify-content: center;
+  flex-direction: column-reverse;
+  padding: 2rem 1.5rem;
 
-  @media (max-width: 1024px) {
-    flex-direction: column-reverse;
-    justify-content: center;
-    padding: 2rem 1.5rem;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 94px 1.5rem;
+  }
+
+  @media (min-width: 640px) {
+    max-width: 39rem;
+  }
+  @media (min-width: 1024px) {
+    max-width: 56rem;
+  }
+  @media (min-width: 1440px) {
+    max-width: 73rem;
   }
 `
 
@@ -90,9 +101,9 @@ interface ItemIconProps {
   color: keyof typeof ITEM_COLORS
 }
 
-export const ItemIcon = styled.div<ItemIconProps>`
-  height: 32px;
-  width: 32px;
+export const ItemIcon = styled.span<ItemIconProps>`
+  min-height: 32px;
+  min-width: 32px;
   border-radius: 50%;
   background: ${(props) => props.theme[ITEM_COLORS[props.color]]};
   color: ${(props) => props.theme.white};

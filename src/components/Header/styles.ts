@@ -6,7 +6,6 @@ export const HeaderContainer = styled.header`
   padding: 2rem 1.5rem;
   z-index: 10;
   width: 100%;
-  max-width: 73rem;
   margin: 0 auto;
 
   nav {
@@ -21,6 +20,16 @@ export const HeaderContainer = styled.header`
         height: 1.375rem;
       }
     }
+  }
+
+  @media (min-width: 640px) {
+    max-width: 39rem;
+  }
+  @media (min-width: 1024px) {
+    max-width: 56rem;
+  }
+  @media (min-width: 1440px) {
+    max-width: 73rem;
   }
 `
 

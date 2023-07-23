@@ -9,7 +9,7 @@ export const ProductContainer = styled.div`
   gap: 1rem;
 
   padding: 0 1.5rem 1.25rem;
-  width: 16rem;
+  width: 22rem;
 
   background: ${({ theme }) => theme['base-card']};
 
@@ -17,6 +17,10 @@ export const ProductContainer = styled.div`
   border-top-left-radius: 6px;
   border-bottom-right-radius: 6px;
   border-bottom-left-radius: 36px;
+
+  @media (min-width: 640px) {
+    width: 16rem;
+  }
 `
 
 export const ProductHeader = styled.div`

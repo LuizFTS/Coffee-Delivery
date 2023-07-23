@@ -29,20 +29,35 @@ export const CoffeeContainer = styled.div`
   div {
     h2 {
       text-transform: capitalize;
+      font-size: 12px;
+
+      @media (min-width: 640px) {
+        font-size: inherit;
+      }
     }
+
     div {
-      display: flex;
-      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      @media (min-width: 640px) {
+        margin: 0;
+        display: flex;
+        gap: 0.5rem;
+      }
     }
   }
 
   & > p {
     flex: 1;
     text-align: right;
-    font-size: ${({ theme }) => theme.baloo.size.md};
+    font-size: ${({ theme }) => theme.baloo.size.xs}; //md
     font-weight: 800;
     line-height: 1.3;
     color: ${({ theme }) => theme['base-text']};
+
+    @media (min-width: 640px) {
+      font-size: ${({ theme }) => theme.baloo.size.md};
+    }
   }
 `
 

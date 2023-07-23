@@ -4,11 +4,16 @@ export const ScreenContainer = styled.div`
   display: flex;
   height: calc(100vh - 6.5rem);
   width: 100%;
-  padding: 5rem 10rem;
+  max-width: 20rem;
+  padding-top: 1rem;
   justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 10rem;
+  flex-direction: column;
+
   h2 {
     font-family: ${({ theme }) => theme.baloo.family};
-    font-size: ${({ theme }) => theme.baloo.size.lg};
+    font-size: ${({ theme }) => theme.baloo.size.md};
     line-height: 1.3;
     font-weight: 900;
     color: ${({ theme }) => theme['yellow-dark']};
@@ -16,16 +21,47 @@ export const ScreenContainer = styled.div`
 
   p {
     font-family: ${({ theme }) => theme.roboto.family};
-    font-size: ${({ theme }) => theme.roboto.size.lg};
+    font-size: ${({ theme }) => theme.roboto.size.sm};
     line-height: 1.3;
     font-weight: 400;
     color: ${({ theme }) => theme['base-subtitle']};
 
     margin-top: 0.25rem;
   }
+
+  img {
+    width: 20rem;
+    height: auto;
+  }
+
+  @media (min-width: 640px) {
+    max-width: 37.5rem;
+
+    img {
+      width: 37.5rem;
+      height: auto;
+    }
+
+    h2 {
+      font-size: ${({ theme }) => theme.baloo.size.lg};
+    }
+
+    p {
+      font-size: ${({ theme }) => theme.roboto.size.lg};
+    }
+  }
+  @media (min-width: 1280px) {
+    max-width: 70rem;
+    flex-direction: row;
+    padding: 5rem 0;
+  }
 `
 export const CofirmationContainer = styled.div`
-  width: 50%;
+  width: 100%;
+
+  @media (min-width: 1280px) {
+    width: 50%;
+  }
 `
 
 export const DataCardWrap = styled.div`
@@ -76,28 +112,36 @@ export const DataCard = styled.div`
 
 export const DataCardText = styled.p`
   font-family: ${({ theme }) => theme.roboto.family} !important;
-  font-size: ${({ theme }) => theme.roboto.size.md} !important;
+  font-size: ${({ theme }) => theme.roboto.size.sm} !important;
   font-weight: 400;
   line-height: 1.3 !important;
 
   color: ${({ theme }) => theme['base-text']} !important;
   margin: 0 !important;
+
+  @media (min-width: 640px) {
+    font-size: ${({ theme }) => theme.roboto.size.md} !important;
+  }
 `
 
 export const DataCardInputText = styled.span`
   font-family: ${({ theme }) => theme.roboto.family} !important;
-  font-size: ${({ theme }) => theme.roboto.size.md} !important;
+  font-size: ${({ theme }) => theme.roboto.size.sm} !important;
   font-weight: 800 !important;
   line-height: 1.3 !important;
   text-transform: capitalize;
 
   color: ${({ theme }) => theme['base-text']} !important;
   margin: 0 !important;
+
+  @media (min-width: 640px) {
+    font-size: ${({ theme }) => theme.roboto.size.md} !important;
+  }
 `
 
 export const DataCardCapitalized = styled.span`
   font-family: ${({ theme }) => theme.roboto.family} !important;
-  font-size: ${({ theme }) => theme.roboto.size.md} !important;
+  font-size: ${({ theme }) => theme.roboto.size.sm} !important;
   font-weight: 400 !important;
   line-height: 1.3 !important;
   text-transform: capitalize;
@@ -105,6 +149,10 @@ export const DataCardCapitalized = styled.span`
   color: ${({ theme }) => theme['base-text']} !important;
   margin: 0 !important;
   text-transform: capitalize;
+
+  @media (min-width: 640px) {
+    font-size: ${({ theme }) => theme.roboto.size.md} !important;
+  }
 `
 const IconColor = {
   purple: 'purple',

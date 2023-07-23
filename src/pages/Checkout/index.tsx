@@ -7,6 +7,7 @@ import {
   AddressForm,
   ErrorSpan,
   ErrorsContainer,
+  OrderCoffeesContainer,
 } from './styles'
 import { MapPinLine } from '@phosphor-icons/react'
 
@@ -144,10 +145,10 @@ export const Checkout = () => {
             paymentMethod={paymentMethod}
           />
         </OrderFormContainer>
-        <OrderFormContainer>
+        <OrderCoffeesContainer>
           <h2>Cafés selecionados</h2>
           <SelectedCoffeesContainer />
-        </OrderFormContainer>
+        </OrderCoffeesContainer>
       </FormProvider>
     </CheckoutContainer>
   )
